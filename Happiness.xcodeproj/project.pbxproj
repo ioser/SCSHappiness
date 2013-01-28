@@ -17,7 +17,7 @@
 		9A47DEC916B648B800DB2FA5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DEC816B648B800DB2FA5 /* Default@2x.png */; };
 		9A47DECB16B648B800DB2FA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DECA16B648B800DB2FA5 /* Default-568h@2x.png */; };
 		9A47DECE16B648B800DB2FA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DECC16B648B800DB2FA5 /* MainStoryboard.storyboard */; };
-		9A47DED116B648B800DB2FA5 /* SCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DED016B648B800DB2FA5 /* SCSViewController.m */; };
+		9A47DED116B648B800DB2FA5 /* SCSHappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DED016B648B800DB2FA5 /* SCSHappinessViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,8 @@
 		9A47DEC816B648B800DB2FA5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A47DECA16B648B800DB2FA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9A47DECD16B648B800DB2FA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9A47DECF16B648B800DB2FA5 /* SCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSViewController.h; sourceTree = "<group>"; };
-		9A47DED016B648B800DB2FA5 /* SCSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSViewController.m; sourceTree = "<group>"; };
+		9A47DECF16B648B800DB2FA5 /* SCSHappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSHappinessViewController.h; sourceTree = "<group>"; };
+		9A47DED016B648B800DB2FA5 /* SCSHappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSHappinessViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 				9A47DEC316B648B800DB2FA5 /* SCSAppDelegate.h */,
 				9A47DEC416B648B800DB2FA5 /* SCSAppDelegate.m */,
 				9A47DECC16B648B800DB2FA5 /* MainStoryboard.storyboard */,
-				9A47DECF16B648B800DB2FA5 /* SCSViewController.h */,
-				9A47DED016B648B800DB2FA5 /* SCSViewController.m */,
+				9A47DECF16B648B800DB2FA5 /* SCSHappinessViewController.h */,
+				9A47DED016B648B800DB2FA5 /* SCSHappinessViewController.m */,
 				9A47DEBB16B648B800DB2FA5 /* Supporting Files */,
 			);
 			path = Happiness;
@@ -176,7 +176,7 @@
 			files = (
 				9A47DEC116B648B800DB2FA5 /* main.m in Sources */,
 				9A47DEC516B648B800DB2FA5 /* SCSAppDelegate.m in Sources */,
-				9A47DED116B648B800DB2FA5 /* SCSViewController.m in Sources */,
+				9A47DED116B648B800DB2FA5 /* SCSHappinessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

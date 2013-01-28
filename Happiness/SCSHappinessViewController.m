@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Richard Millet. All rights reserved.
 //
 
-#import "SCSViewController.h"
+#import "SCSHappinessViewController.h"
 
-@interface SCSViewController ()
+@interface SCSHappinessViewController ()
 
 @end
 
-@implementation SCSViewController
+@implementation SCSHappinessViewController
 
 - (void)viewDidLoad
 {

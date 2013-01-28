@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCSViewController : UIViewController
+@interface SCSHappinessViewController : UIViewController
 
 @end
