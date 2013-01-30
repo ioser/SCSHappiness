@@ -7,8 +7,11 @@
 //
 
 #import "SCSHappinessViewController.h"
+#import "SCSCircleView.h"
+#import "SCSSmileView.h"
 
 @interface SCSHappinessViewController ()
+@property (weak, nonatomic) IBOutlet SCSCircleView *circleView;
 
 @end
 
@@ -24,6 +27,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)adjustScale:(UISlider *)sender {
+    CGFloat scaleValue = sender.value;
+    NSLog(@"Slider changed to %f", scaleValue);
+    self.circleView.transform = CGAffineTransformMakeScale(scaleValue, scaleValue);
 }
 
 @end

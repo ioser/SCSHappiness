@@ -53,6 +53,7 @@
     [smilePath addQuadCurveToPoint:rightCornerOfSmile controlPoint:controlPoint];
     smilePath.lineWidth = 4;
     smilePath.lineCapStyle = kCGLineCapRound;
+    [smilePath addClip];
     [smilePath stroke];
 }
 
