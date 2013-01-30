@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A20084E16B8EF390028B536 /* SCSSmileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A20084D16B8EF390028B536 /* SCSSmileView.m */; };
 		9A47DEB516B648B800DB2FA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB416B648B800DB2FA5 /* UIKit.framework */; };
 		9A47DEB716B648B800DB2FA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB616B648B800DB2FA5 /* Foundation.framework */; };
 		9A47DEB916B648B800DB2FA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB816B648B800DB2FA5 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A20084C16B8EF390028B536 /* SCSSmileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSSmileView.h; sourceTree = "<group>"; };
+		9A20084D16B8EF390028B536 /* SCSSmileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSSmileView.m; sourceTree = "<group>"; };
 		9A47DEB016B648B800DB2FA5 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A47DEB416B648B800DB2FA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A47DEB616B648B800DB2FA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,8 @@
 				9A47DEC316B648B800DB2FA5 /* SCSAppDelegate.h */,
 				9A47DEC416B648B800DB2FA5 /* SCSAppDelegate.m */,
 				9A47DECC16B648B800DB2FA5 /* MainStoryboard.storyboard */,
+				9A20084C16B8EF390028B536 /* SCSSmileView.h */,
+				9A20084D16B8EF390028B536 /* SCSSmileView.m */,
 				9A47DECF16B648B800DB2FA5 /* SCSHappinessViewController.h */,
 				9A47DED716B64FDE00DB2FA5 /* SCSCircleView.h */,
 				9A47DED816B64FDE00DB2FA5 /* SCSCircleView.m */,
@@ -183,6 +188,7 @@
 				9A47DEC516B648B800DB2FA5 /* SCSAppDelegate.m in Sources */,
 				9A47DED116B648B800DB2FA5 /* SCSHappinessViewController.m in Sources */,
 				9A47DED916B64FDE00DB2FA5 /* SCSCircleView.m in Sources */,
+				9A20084E16B8EF390028B536 /* SCSSmileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				9A47DED616B648B800DB2FA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

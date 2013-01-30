@@ -27,7 +27,8 @@
 {
     [[UIColor blueColor] setStroke];
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:rect];
-    circlePath.lineWidth = 4;
+    circlePath.lineWidth = 8;
+    [circlePath addClip];
     [circlePath stroke];
 }
 
