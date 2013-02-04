@@ -35,6 +35,8 @@
     rightCornerOfSmile = CGPointMake(rightXValue, verticalCenter);
     controlPoint = CGPointMake(horizontalCenter, bottomYValue);
     geometryIsSet = YES;
+    
+    NSLog(@"Starting smile control point: %f", controlPoint.y);
 }
 
 /*
@@ -55,6 +57,25 @@
     smilePath.lineCapStyle = kCGLineCapRound;
     [smilePath addClip];
     [smilePath stroke];
+}
+
+- (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer {
+//    CGPoint velocity = [panGestureRecognizer velocityInView:self];
+//    NSLog(@"Velocity x:%f y:%f", velocity.x, velocity.y);
+
+    CGPoint location = [panGestureRecognizer locationInView:self];
+    CGFloat yLocation = location.y;
+    CGFloat maxBottom = self.bounds.size.height;
+    
+    NSLog(@"y: %f bottom: %f", yLocation, maxBottom);
+    
+    CGFloat yControl = MIN(yLocation, maxBottom);
+    yControl = MAX(yControl, 0);
+    
+    NSLog(@"Final y: %f", yControl);
+    
+    controlPoint = CGPointMake(controlPoint.x, yControl);
+    [self setNeedsDisplay];
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface SCSSmileView : UIView
 
+- (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer;
+
 @end

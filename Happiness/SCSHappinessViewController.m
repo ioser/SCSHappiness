@@ -11,7 +11,10 @@
 #import "SCSSmileView.h"
 
 @interface SCSHappinessViewController ()
-@property (weak, nonatomic) IBOutlet SCSCircleView *circleView;
+
+@property (weak, nonatomic) IBOutlet SCSCircleView *faceView;
+@property (weak, nonatomic) IBOutlet UILabel *happinessIndex;
+@property (weak, nonatomic) IBOutlet SCSSmileView *smileView;
 
 @end
 
@@ -28,10 +31,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)adjustScale:(UISlider *)sender {
-    CGFloat scaleValue = sender.value;
-    NSLog(@"Slider changed to %f", scaleValue);
-    self.circleView.transform = CGAffineTransformMakeScale(scaleValue, scaleValue);
+
+- (IBAction)adjustScale:(UIPinchGestureRecognizer *)sender {
+    CGFloat scaleValue = MIN(sender.scale, 1);
+    NSLog(@"Pinch gesture scale changed to %f", scaleValue);
+    self.faceView.transform = CGAffineTransformMakeScale(scaleValue, scaleValue);
+    self.happinessIndex.text = [NSString stringWithFormat: @"%.2f", scaleValue];
+}
+
+- (IBAction)adjustSmile:(UIPanGestureRecognizer*)sender {
+    [self.smileView adjustSmile:sender];
 }
 
 @end

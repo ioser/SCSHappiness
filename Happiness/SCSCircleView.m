@@ -8,6 +8,10 @@
 
 #import "SCSCircleView.h"
 
+@interface SCSCircleView ()
+
+@end
+
 @implementation SCSCircleView
 
 - (id)initWithFrame:(CGRect)frame
@@ -25,6 +29,8 @@
  */
 - (void)drawRect:(CGRect)rect
 {
+    NSLog(@"Drawing cirlce in rect top:%f left:%f width:%f height:%f",
+          rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
     [[UIColor blueColor] setStroke];
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:rect];
     circlePath.lineWidth = 8;
