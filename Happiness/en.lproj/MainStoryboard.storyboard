@@ -16,11 +16,17 @@
                                 <subviews>
                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-15-MHT" userLabel="Left Eye" customClass="SCSCircleView">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" type="user" id="4Df-Hy-JN8"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iIy-oT-gdu" userLabel="Right Eye" customClass="SCSCircleView">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" type="user" id="WTV-Im-vnr"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMd-IG-YP2" customClass="SCSSmileView">
+                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BMd-IG-YP2" customClass="SCSSmileView">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -31,18 +37,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="iIy-oT-gdu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6Nj-Po-VfS"/>
-                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="centerX" secondItem="tFw-lJ-27P" secondAttribute="centerX" type="default" id="F7d-wx-vex"/>
-                                    <constraint firstItem="iIy-oT-gdu" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="140" id="FPE-Qr-3BD"/>
-                                    <constraint firstAttribute="trailing" secondItem="iIy-oT-gdu" secondAttribute="trailing" constant="50" id="GMM-vy-Kko"/>
-                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="tFw-lJ-27P" secondAttribute="top" constant="98" id="T1S-eD-I8P"/>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="top" secondItem="tFw-lJ-27P" secondAttribute="top" constant="60" id="Wwu-sT-IPe"/>
-                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="QZt-15-MHT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ycd-QZ-9re"/>
+                                    <constraint firstItem="QZt-15-MHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="top" constant="60" type="user" id="9Sw-th-2J3"/>
+                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="centerX" secondItem="tFw-lJ-27P" secondAttribute="centerX" type="default" id="AoW-9K-7iV"/>
+                                    <constraint firstAttribute="height" constant="220" type="user" id="DpJ-8l-IR1"/>
+                                    <constraint firstItem="QZt-15-MHT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="50" type="user" id="EIc-bE-lBu"/>
+                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="40" id="FPG-xH-9xD"/>
+                                    <constraint firstAttribute="trailing" secondItem="QZt-15-MHT" secondAttribute="trailing" constant="140" id="Gwd-tc-f4m"/>
+                                    <constraint firstItem="QZt-15-MHT" firstAttribute="height" secondItem="iIy-oT-gdu" secondAttribute="height" type="user" id="JOc-Xa-PWS"/>
+                                    <constraint firstItem="iIy-oT-gdu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="top" constant="60" type="user" id="MIr-7h-ufM"/>
+                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="tFw-lJ-27P" secondAttribute="top" constant="98" type="user" id="VyD-Vq-Pu8"/>
                                     <constraint firstAttribute="bottom" secondItem="BMd-IG-YP2" secondAttribute="bottom" constant="42" id="bJQ-2R-hxd"/>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="50" id="d67-xI-aTa"/>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="top" secondItem="iIy-oT-gdu" secondAttribute="top" type="default" id="hpL-ky-ZFE"/>
-                                    <constraint firstAttribute="trailing" secondItem="QZt-15-MHT" secondAttribute="trailing" constant="140" id="hwv-Um-a3k"/>
-                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="40" id="kan-52-Tog"/>
+                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="QZt-15-MHT" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="bgx-P3-wZS"/>
+                                    <constraint firstAttribute="trailing" secondItem="iIy-oT-gdu" secondAttribute="trailing" constant="50" id="gbI-66-ZBt"/>
+                                    <constraint firstAttribute="width" constant="220" type="user" id="iXX-iB-35n"/>
+                                    <constraint firstItem="iIy-oT-gdu" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="140" id="ik4-sU-z2z"/>
+                                    <constraint firstItem="QZt-15-MHT" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="50" id="rF3-aX-hXe"/>
+                                    <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="iIy-oT-gdu" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="uYO-ej-seX"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bRq-T1-YMl" appends="YES" id="POU-CH-s1f"/>
@@ -51,10 +61,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tFw-lJ-27P" firstAttribute="top" secondItem="3" secondAttribute="top" constant="120" id="95k-Q8-7l3"/>
-                            <constraint firstItem="tFw-lJ-27P" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MJ2-s4-3rN"/>
-                            <constraint firstItem="tFw-lJ-27P" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="ZeP-IC-hlV"/>
-                            <constraint firstItem="tFw-lJ-27P" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" id="eyJ-hJ-t4J"/>
+                            <constraint firstItem="tFw-lJ-27P" firstAttribute="top" secondItem="3" secondAttribute="top" constant="50" type="user" id="FT2-lJ-PeQ"/>
+                            <constraint firstItem="tFw-lJ-27P" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" type="user" id="bcE-eO-bI6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -74,7 +82,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-136" y="-40"/>
+            <point key="canvasLocation" x="-233" y="-44"/>
         </scene>
     </scenes>
     <classes>
