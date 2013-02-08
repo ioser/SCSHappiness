@@ -10,7 +10,8 @@
 
 @implementation SCSSmileView {
     BOOL geometryIsSet;
-    CGPoint leftCornerOfSmile, rightCornerOfSmile, controlPoint;
+    CGPoint leftCornerOfSmile, rightCornerOfSmile; //, controlPoint;
+    CGFloat horizontalCenter;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -27,16 +28,16 @@
     CGFloat horizontalOffset = 10;
     CGFloat leftXValue = rect.origin.x + horizontalOffset;
     CGFloat rightXValue = rect.origin.y + rect.size.width - horizontalOffset;
-    CGFloat bottomYValue = rect.origin.y + rect.size.height;
+//    CGFloat bottomYValue = rect.origin.y + rect.size.height;
     CGFloat verticalCenter = rect.origin.y + rect.size.height / 2;
-    CGFloat horizontalCenter = rect.origin.x + rect.size.width / 2;
+    horizontalCenter = rect.origin.x + rect.size.width / 2;
     
     leftCornerOfSmile = CGPointMake(leftXValue, verticalCenter);
     rightCornerOfSmile = CGPointMake(rightXValue, verticalCenter);
-    controlPoint = CGPointMake(horizontalCenter, bottomYValue);
+//    controlPoint = CGPointMake(horizontalCenter, bottomYValue);
     geometryIsSet = YES;
     
-    NSLog(@"Starting smile control point: %f", controlPoint.y);
+//    NSLog(@"Starting smile control point: %f", controlPoint.y);
 }
 
 /*
@@ -52,6 +53,10 @@
     [[UIColor blueColor] setStroke];
     UIBezierPath *smilePath = [UIBezierPath bezierPath];
     [smilePath moveToPoint:leftCornerOfSmile];
+    // ask the data source for the happiness value
+    CGFloat controlYValue = [self.smileDataSource happinessLevelForSmileView:self];
+    CGPoint controlPoint = CGPointMake(horizontalCenter, controlYValue);
+    // continue as before
     [smilePath addQuadCurveToPoint:rightCornerOfSmile controlPoint:controlPoint];
     smilePath.lineWidth = 4;
     smilePath.lineCapStyle = kCGLineCapRound;
@@ -59,22 +64,31 @@
     [smilePath stroke];
 }
 
-- (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer {
-//    CGPoint velocity = [panGestureRecognizer velocityInView:self];
-//    NSLog(@"Velocity x:%f y:%f", velocity.x, velocity.y);
-
-    CGPoint location = [panGestureRecognizer locationInView:self];
+//
+// Clip/trim the y-location point to fit within the boundaries of the smile view
+//
+- (CGFloat)clipVertical:(CGPoint)location {
     CGFloat yLocation = location.y;
+    yLocation = MAX(0, yLocation);
+    
     CGFloat maxBottom = self.bounds.size.height;
-    
-    NSLog(@"y: %f bottom: %f", yLocation, maxBottom);
-    
+    NSLog(@"y: %f max-bottom: %f", yLocation, maxBottom);    
     CGFloat yControl = MIN(yLocation, maxBottom);
-    yControl = MAX(yControl, 0);
+    return yControl;
+}
+
+- (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer {
+    CGPoint location = [panGestureRecognizer locationInView:self];
+    CGFloat yControl = [self clipVertical:location];
     
     NSLog(@"Final y: %f", yControl);
     
-    controlPoint = CGPointMake(controlPoint.x, yControl);
+//    controlPoint = CGPointMake(controlPoint.x, yControl);
+
+    // Ask the data source instance to set its happiness value to the yControl value
+    if ([self.smileDataSource respondsToSelector:@selector(setHappinessLevel:forSmileView:)]) {
+        [self.smileDataSource setHappinessLevel:yControl forSmileView:self];
+    }
     [self setNeedsDisplay];
 }
 

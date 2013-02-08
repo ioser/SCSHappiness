@@ -8,8 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCSSmileView : UIView
+@protocol SCSSmileViewDataSource;  // Forward declare the protocol
+
+@interface SCSSmileView : UIView {
+}
+
+@property (weak, nonatomic) IBOutlet id<SCSSmileViewDataSource>smileDataSource;
 
 - (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer;
+
+@end
+
+@protocol SCSSmileViewDataSource <NSObject>
+
+- (CGFloat)happinessLevelForSmileView:(SCSSmileView *)smileView;
+
+@optional
+
+- (void)setHappinessLevel:(CGFloat)happinessLevel
+             forSmileView:(SCSSmileView *)smileView;
 
 @end

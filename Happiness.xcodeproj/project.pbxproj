@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A20084E16B8EF390028B536 /* SCSSmileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A20084D16B8EF390028B536 /* SCSSmileView.m */; };
+		9A3E8A1E16C3669700E01D96 /* SCSHappiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E8A1D16C3669700E01D96 /* SCSHappiness.m */; };
 		9A47DEB516B648B800DB2FA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB416B648B800DB2FA5 /* UIKit.framework */; };
 		9A47DEB716B648B800DB2FA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB616B648B800DB2FA5 /* Foundation.framework */; };
 		9A47DEB916B648B800DB2FA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47DEB816B648B800DB2FA5 /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		9A20084C16B8EF390028B536 /* SCSSmileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSSmileView.h; sourceTree = "<group>"; };
 		9A20084D16B8EF390028B536 /* SCSSmileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSSmileView.m; sourceTree = "<group>"; };
+		9A3E8A1C16C3669700E01D96 /* SCSHappiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSHappiness.h; sourceTree = "<group>"; };
+		9A3E8A1D16C3669700E01D96 /* SCSHappiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSHappiness.m; sourceTree = "<group>"; };
 		9A47DEB016B648B800DB2FA5 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A47DEB416B648B800DB2FA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A47DEB616B648B800DB2FA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 				9A47DED716B64FDE00DB2FA5 /* SCSCircleView.h */,
 				9A47DED816B64FDE00DB2FA5 /* SCSCircleView.m */,
 				9A47DED016B648B800DB2FA5 /* SCSHappinessViewController.m */,
+				9A3E8A1C16C3669700E01D96 /* SCSHappiness.h */,
+				9A3E8A1D16C3669700E01D96 /* SCSHappiness.m */,
 				9A47DEBB16B648B800DB2FA5 /* Supporting Files */,
 			);
 			path = Happiness;
@@ -189,6 +194,7 @@
 				9A47DED116B648B800DB2FA5 /* SCSHappinessViewController.m in Sources */,
 				9A47DED916B64FDE00DB2FA5 /* SCSCircleView.m in Sources */,
 				9A20084E16B8EF390028B536 /* SCSSmileView.m in Sources */,
+				9A3E8A1E16C3669700E01D96 /* SCSHappiness.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

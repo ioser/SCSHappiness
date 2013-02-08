@@ -30,6 +30,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="smileDataSource" destination="2" id="KoQ-Kp-fKU"/>
                                             <outletCollection property="gestureRecognizers" destination="fsJ-73-qvB" appends="YES" id="xVu-yt-b9m"/>
                                         </connections>
                                     </view>
@@ -37,14 +38,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="top" constant="60" type="user" id="9Sw-th-2J3"/>
                                     <constraint firstItem="BMd-IG-YP2" firstAttribute="centerX" secondItem="tFw-lJ-27P" secondAttribute="centerX" type="default" id="AoW-9K-7iV"/>
                                     <constraint firstAttribute="height" constant="220" type="user" id="DpJ-8l-IR1"/>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="50" type="user" id="EIc-bE-lBu"/>
                                     <constraint firstItem="BMd-IG-YP2" firstAttribute="leading" secondItem="tFw-lJ-27P" secondAttribute="leading" constant="40" id="FPG-xH-9xD"/>
                                     <constraint firstAttribute="trailing" secondItem="QZt-15-MHT" secondAttribute="trailing" constant="140" id="Gwd-tc-f4m"/>
-                                    <constraint firstItem="QZt-15-MHT" firstAttribute="height" secondItem="iIy-oT-gdu" secondAttribute="height" type="user" id="JOc-Xa-PWS"/>
-                                    <constraint firstItem="iIy-oT-gdu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tFw-lJ-27P" secondAttribute="top" constant="60" type="user" id="MIr-7h-ufM"/>
                                     <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="tFw-lJ-27P" secondAttribute="top" constant="98" type="user" id="VyD-Vq-Pu8"/>
                                     <constraint firstAttribute="bottom" secondItem="BMd-IG-YP2" secondAttribute="bottom" constant="42" id="bJQ-2R-hxd"/>
                                     <constraint firstItem="BMd-IG-YP2" firstAttribute="top" secondItem="QZt-15-MHT" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="bgx-P3-wZS"/>
@@ -82,30 +79,9 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-233" y="-44"/>
+            <point key="canvasLocation" x="-402" y="-193"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SCSCircleView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSCircleView.h"/>
-        </class>
-        <class className="SCSHappinessViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSHappinessViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="adjustScale:" candidateClass="UIPinchGestureRecognizer"/>
-                <relationship kind="action" name="adjustSmile:" candidateClass="UIPanGestureRecognizer"/>
-                <relationship kind="outlet" name="faceView" candidateClass="SCSCircleView"/>
-                <relationship kind="outlet" name="happinessIndex" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="smileView" candidateClass="SCSSmileView"/>
-            </relationships>
-        </class>
-        <class className="SCSSmileView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSSmileView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
