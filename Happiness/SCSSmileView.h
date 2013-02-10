@@ -28,4 +28,7 @@
 - (void)setHappinessLevel:(CGFloat)happinessLevel
              forSmileView:(SCSSmileView *)smileView;
 
+- (void)setHappinessPercentage:(CGFloat)happinessPercentage
+                  forSmileView:(SCSSmileView *)smileView;
+
 @end

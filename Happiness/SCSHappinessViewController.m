@@ -11,6 +11,8 @@
 #import "SCSSmileView.h"
 #import "SCSHappiness.h"
 
+#define NUETRAL_HAPPINESS_PERCENTAGE 60
+
 @interface SCSHappinessViewController ()<SCSSmileViewDataSource>
 
 @property (weak, nonatomic) IBOutlet SCSCircleView *faceView;
@@ -26,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self setHappinessPercentage:NUETRAL_HAPPINESS_PERCENTAGE forSmileView:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +69,16 @@
              forSmileView:(SCSSmileView *)smileView {
     CGFloat height = smileView.frame.size.height;
     CGFloat happinessPercentage = 100 * (happinessLevel / height);
+    [self setHappinessPercentage:happinessPercentage forSmileView:smileView];
+}
+
+- (void)setHappinessPercentage:(CGFloat)happinessPercentage
+                  forSmileView:(SCSSmileView *)smileView {
+    if (happinessPercentage < 0) {
+        happinessPercentage = 0;
+    } else if (happinessPercentage > 100) {
+        happinessPercentage = 100;
+    }
     self.happinessModel.happinessPercentage = happinessPercentage;
 }
 
