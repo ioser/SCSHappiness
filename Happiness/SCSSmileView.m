@@ -79,8 +79,8 @@
 
 - (void)adjustSmile:(UIPanGestureRecognizer*)panGestureRecognizer {
     CGPoint location = [panGestureRecognizer locationInView:self];
+
     CGFloat yControl = [self clipVertical:location];
-    
     NSLog(@"Final y: %f", yControl);
     
 //    controlPoint = CGPointMake(controlPoint.x, yControl);

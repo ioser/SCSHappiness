@@ -82,6 +82,30 @@
             <point key="canvasLocation" x="-402" y="-193"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SCSCircleView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSCircleView.h"/>
+        </class>
+        <class className="SCSHappinessViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSHappinessViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="adjustScale:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="adjustSmile:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="outlet" name="faceView" candidateClass="SCSCircleView"/>
+                <relationship kind="outlet" name="happinessIndex" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="smileView" candidateClass="SCSSmileView"/>
+            </relationships>
+        </class>
+        <class className="SCSSmileView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCSSmileView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="smileDataSource"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
